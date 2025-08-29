@@ -1,5 +1,43 @@
-@import "bootstrap/dist/css/bootstrap.min.css";
+body {
+  font-family: "Gill Sans", sans-serif;
+  background: #292928;
+  color: #c7bcbc;
+  text-align: center;
+  padding: 30px;
+}
 
-body{
-    background: white;
+h1 {
+  color: #ff5c5c;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #f4772a;
+  color: rgb(14, 14, 14);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5b8576;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  background: rgb(98, 83, 5);
+  color: #ffffff;
+  font-weight: lighter;
+  font-size: 100%;
+  margin: 5px auto;
+  padding: 8px 12px;
+  width: 250px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(116, 8, 8, 0.1);
 }
