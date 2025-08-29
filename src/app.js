@@ -1,7 +1,7 @@
 
 let pronoun = ['the', 'our'];
 let adj = ['great', 'big'];
-let noun = ['jogger', 'racoon', 'lastofus']; // "lastofus" can use .us hack
+let noun = ['jogger', 'racoon', 'lastofus']; 
 let extensions = ['.com', '.net', '.us', '.io'];
 
 
