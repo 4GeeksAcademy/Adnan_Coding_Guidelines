@@ -1,7 +1,7 @@
 
-let pronoun = ['the', 'our'];
-let adj = ['great', 'big'];
-let noun = ['jogger', 'racoon', 'lastofus']; 
+let pronouns = ['the', 'our'];
+let adjectives = ['great', 'big'];
+let nouns = ['jogger', 'racoon', 'lastofus']; 
 let extensions = ['.com', '.net', '.us', '.io'];
 
 
@@ -9,19 +9,15 @@ let allDomains = [];
 let index = 0;
 
 function prepareDomains() {
-  for (let p of pronoun) {
-    for (let a of adj) {
-      for (let n of noun) {
-        for (let ext of extensions) {
-
-          
-          allDomains.push(p + a + n + ext);
-
-          
-          let hack = ext.replace('.', ''); 
-          if (n.toLowerCase().endsWith(hack.toLowerCase()) && hack.length < n.length) {
-            let hackedDomain = p + a + n.slice(0, -hack.length) + ext;
-            allDomains.push(hackedDomain);
+  for (let pronoun of pronouns) {
+    for (let adjective of adjectives) {
+      for (let noun of nouns) {
+        for (let extension of extensions) {          
+            allDomains.push(pronoun + adjective + noun + extension);
+            let hack = extension.replace('.', ''); 
+              if (noun.toLowerCase().endsWith(hack.toLowerCase()) && hack.length < noun.length) {
+              let hackedDomain = pronoun + adjective + noun.slice(0, -hack.length) + extension;
+              allDomains.push(hackedDomain);
           }
         }
       }
@@ -34,9 +30,7 @@ function generateDomains() {
 
   let domain = allDomains[index];
 
-  
   console.log(domain);
-
   let domainList = document.getElementById("domainList");
   domainList.innerHTML = ""; 
   let li = document.createElement("li");
@@ -47,6 +41,5 @@ function generateDomains() {
 }
 
 prepareDomains();
-
 
 document.getElementById("generateBtn").addEventListener("click", generateDomains);
